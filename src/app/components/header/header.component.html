@@ -1,0 +1,29 @@
+<div class="header">
+    <div class="left-side-header">
+        <span class="material-icons menu-burger-icon" *ngIf='this.auth.isLoggedIn()' (click)="toggleSidenav()">
+          menu
+        </span>
+        <span class="appName"><a [routerLink]="['']"> Real Time App</a></span>
+      </div>
+
+      <div class="right-side-header">
+        <div class="connectionButtonsContainer" *ngIf='!this.auth.isLoggedIn()'>
+            <a [routerLink]="['/signin']"><span>Log in</span></a>
+            <a [routerLink]="['/signup']"><span>Sign up</span></a>
+        </div>
+        <div class="logoutButtonContainer" *ngIf='this.auth.isLoggedIn()'>
+            <a (click)='this.auth.logOut()'><span>Log Out</span></a>
+        </div>
+      </div>
+</div>
+
+<nav id="sidenav" #sidenav>
+    <ul>
+        <a href=""><li><p>Tic Tac Toe</p></li></a>
+        <a href=""><li><p>Connect Four</p></li></a>
+    </ul>
+</nav>
+
+<div id="main" #main>
+    <router-outlet></router-outlet>
+</div>

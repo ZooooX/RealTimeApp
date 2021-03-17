@@ -1,0 +1,32 @@
+.signinContainer{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card{
+        background-color: grey;
+        border-radius: 10px;
+
+        width: 30%;
+        height: 50%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        .fieldsContainer{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+
+            input{
+                height: 35px;
+                margin-bottom: 3%;
+            }
+        }
+    }
+}

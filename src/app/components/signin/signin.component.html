@@ -1,0 +1,11 @@
+<div class="signinContainer">
+    <form [formGroup] = "signinForm" (ngSubmit)="onSubmit()" class="card">
+        <h2>Login</h2>
+        <div class="fieldsContainer">
+            <input type="text" name="" id="usernameInput" placeholder="Username" formControlName= "username" required autocomplete="username">
+            <input type="password" name="" id="passwordInput" placeholder = "Password" formControlName = "password" required autocomplete="current-password">
+        </div>
+
+        <input class="submitButton" type="submit" [disabled]="!signinForm.valid">
+    </form>
+</div>
